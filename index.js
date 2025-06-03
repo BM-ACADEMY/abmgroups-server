@@ -38,6 +38,10 @@ transporter.verify((error, success) => {
     }
 });
 
+app.get('/',async(req,res)=>{
+res.send("server is running ");
+})
+
 // POST endpoint to send emails
 app.post('/api/contact', async (req, res) => {
     const { name, email, description } = req.body;
